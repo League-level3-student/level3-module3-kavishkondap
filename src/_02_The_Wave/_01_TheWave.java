@@ -20,13 +20,16 @@ public class _01_TheWave {
      */
     
     public static ArrayList<String> wave(String str) {
+    	ArrayList <String> wave = new ArrayList ();
         for (int i = 0; i < str.length (); i++) {
         	if (!(str.substring(i, i+1).equals (" "))) {
         		StringBuilder s = new StringBuilder (str);
-        		str.to
+        		String upper = "" + Character.toUpperCase(str.charAt(i));
+        		s.replace(i, i+1, upper);
+        		wave.add(s.toString());
         		//Character.toUpperCase ();
         	}
         }
-        return null;
+        return wave;
     }
 }
